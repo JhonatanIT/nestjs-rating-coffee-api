@@ -1,0 +1,70 @@
+{
+  "name": "my-barista-app-nestjs-nodejs",
+  "version": "1.0.0",
+  "author": "Devskiller",
+  "private": true,
+  "scripts": {
+    "prestart": "rimraf ./dist/",
+    "start": "nest start --watch",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@nestjs/common": "6.10.8",
+    "@nestjs/core": "6.10.8",
+    "@nestjs/platform-express": "6.10.8",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "node-fetch": "^3.3.2",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "6.5.3"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "6.12.9",
+    "@nestjs/schematics": "6.7.6",
+    "@nestjs/testing": "6.10.9",
+    "@types/express": "4.17.2",
+    "@types/jest": "24.0.23",
+    "@types/node": "12.12.16",
+    "@types/supertest": "2.0.8",
+    "jest": "24.9.0",
+    "jest-junit": "10.0.0",
+    "prettier": "1.19.1",
+    "rimraf": "3.0.0",
+    "supertest": "4.0.2",
+    "ts-jest": "24.2.0",
+    "ts-loader": "6.2.1",
+    "ts-node": "8.5.4",
+    "tsconfig-paths": "3.9.0",
+    "tslint": "5.20.1",
+    "typescript": "3.7.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "outputName": "test-results.xml",
+    "suiteName": "tests",
+    "classNameTemplate": "{classname} > {title}",
+    "titleTemplate": "{classname} > {title}",
+    "ancestorSeparator": " > ",
+    "includeShortConsoleOutput": false,
+    "includeConsoleOutput": true
+  }
+}
